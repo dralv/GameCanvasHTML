@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    
+    <title>Circunferências e Arcos</title>
+  </head>
+  <body>
+    <canvas id="meu_canvas" width="300" height="300"></canvas>
+    <script>
+     
+      var canvas = document.getElementById('meu_canvas')
+      var contexto = canvas.getContext('2d') //obtido o contexto gráfico
+      
+      // uma circuferência é um arco de 360 graus, mas tem que ser passados em radianos.
+
+      contexto.fillStyle='grey'
+      contexto.strokeStyle = 'black'
+      contexto.lineWidth = 2
+
+      contexto.beginPath() // para fazer um arco é preciso iniciar uma caminho
+      contexto.arc(50,50,40,90*Math.PI/180,270*Math.PI/180,false) //x,y,raio,inicial,final,sentido
+      contexto.fill()
+      contexto.stroke()
+
+      contexto.beginPath()
+      contexto.arc(150,50,40,90*Math.PI/180,270*Math.PI/180,true) //true sentido horário
+      contexto.fill()
+      contexto.stroke()
+
+      contexto.beginPath()
+      contexto.arc(250,50,40,0,2*Math.PI)
+      contexto.fill()
+      contexto.stroke()
+    </script>
+  </body>
+</html>
