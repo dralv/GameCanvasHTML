@@ -1,3 +1,28 @@
-<canvas id="meu_canva" width="100" height="100"></canvas>
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    
+    <title>Retângulos</title>
+  </head>
+  <body>
+    <canvas id="meu_canvas" width="200" height="200"></canvas>
+    <script>
+      //     Para desenhar no Canvas, é preciso executar um script após ele ter sido
+      // carregado.
+      var canvas = document.getElementById('meu_canvas')
+      var contexto = canvas.getContext('2d') //obtido o contexto gráfico
+      
+      contexto.fillStyle ='red' //retângulo preenchido
+      contexto.fillRect(50,50,100,100)
 
+      contexto.lineWidth = 3;
+      contexto.strokeStyle = 'blue'
+      contexto.strokeRect(50,50,100,100) //contorno
+      
+      
+    </script>
+  </body>
+</html>
 
+<!-- Os atributos width e height da tag <canvas> são obrigatórios, pois
+são os valores usados na geração da imagem. O Canvas pode receber dimensões diferentes via CSS, no entanto, seu processamento sempre será feito usando as dimensões informadas na tag -->
