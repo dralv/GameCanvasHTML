@@ -1,0 +1,34 @@
+<!-- Desenhos mais complexos podem ser desenhados como paths (caminhos). Um path é um conjunto de comandos de desenho que ficam registrados
+na memória, aguardando os métodos fill (preencher) ou stroke (contornar)
+serem chamados. -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    
+    <title>Caminhos</title>
+  </head>
+  <body>
+    <canvas id="meu_canvas" width="300" height="300"></canvas>
+    <script>
+      //     Para desenhar no Canvas, é preciso executar um script após ele ter sido
+      // carregado.
+      var canvas = document.getElementById('meu_canvas')
+      var contexto = canvas.getContext('2d') //obtido o contexto gráfico
+      
+      contexto.beginPath() //indicar que vai se iniciar um caminho
+      contexto.moveTo(75,250) //ponto inicial
+      contexto.lineTo(150,50)
+      contexto.lineTo(225,250)
+      contexto.lineTo(50,120)
+      contexto.lineTo(250,120)
+      contexto.lineTo(75,250)
+      
+      
+     contexto.lineWidth = 3
+     contexto.strokeStyle = 'red'
+     contexto.stroke()
+      
+    </script>
+  </body>
+</html>
