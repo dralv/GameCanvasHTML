@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Imagens</title>
+  </head>
+  <body>
+    <canvas id="meu_canvas" width="300" height="300"></canvas>
+    <script>
+      var canvas = document.getElementById('meu_canvas')
+      var contexto = canvas.getContext('2d') //obtido o contexto gráfico
+
+      // uma circuferência é um arco de 360 graus, mas tem que ser passados em radianos.
+
+      var imagem = new Image()
+      imagem.src = 'img/explosao.png'
+      imagem.onload = function () {
+          context.drawImage(
+            imagem, 80, 10, 60, 65,
+            20,20,60,65)
+      }
+    </script>
+  </body>
+</html>
